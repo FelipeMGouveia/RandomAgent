@@ -3,16 +3,27 @@
 
     -- created on Maio 11, 2011
 */
-MAS massimEcomp {
+MAS randomAgent {
    infrastructure: Centralised
 
    agents:
            randomAgent
-           		[host="localhost", port=12300, teamid="RandomAgent",
-           		 username="b#nid", password="1"]
+           		[host="localhost", port=12300, teamid="randomAgent",
+           		 username="b1", password="1"]
 		   		agentClass		br.poli.ecomp.sma.massim.agent.EcompAgent
 		   		agentArchClass	br.poli.ecomp.sma.massim.arch.EcompArch
-		   		beliefBaseClass	br.poli.ecomp.sma.massim.agent.EcompBeliefBase;
+		   		beliefBaseClass	br.poli.ecomp.sma.massim.agent.EcompBeliefBase( 
+		   								"gsize(_,_)",
+		   								"steps(_)",
+		   								"opponen(_,_)",
+		   								"step(_)",
+		   								"corral(_,_,_,_)",
+		   								"pos(_,_,_)",
+		   								"ally_pos(key,_,_)",
+		   								"opponent_pos(key,_,_)",
+		   								"cow(key,_,_)",
+		   								"target(_,_)") 
+		   						#1;
 
    aslSourcePath: "src_asl";
 }
