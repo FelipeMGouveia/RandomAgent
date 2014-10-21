@@ -1,0 +1,18 @@
+/*
+    Jason Project
+
+    -- created on Maio 11, 2011
+*/
+MAS massimEcomp {
+   infrastructure: Centralised
+
+   agents:
+           randomAgent
+           		[host="localhost", port=12300, teamid="RandomAgent",
+           		 username="b#nid", password="1"]
+		   		agentClass		br.poli.ecomp.sma.massim.agent.EcompAgent
+		   		agentArchClass	br.poli.ecomp.sma.massim.arch.EcompArch
+		   		beliefBaseClass	br.poli.ecomp.sma.massim.agent.EcompBeliefBase;
+
+   aslSourcePath: "src_asl";
+}
